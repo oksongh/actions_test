@@ -1,0 +1,17 @@
+name: demo
+run-name: github.actior is ${{github.actior}} .
+on: 
+  - push
+jobs: 
+  demo-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo "github.event is ${{github.event}}"
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
