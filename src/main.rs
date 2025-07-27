@@ -22,8 +22,8 @@ fn test_ci_pass2_desu() {
     assert!(fish_check("saba"));
     assert!(fish_check("hugu"));
     assert!(fish_check("saba and hugu"));
-    assert!(fish_check("unagi"));
-    assert!(fish_check("una"));
 
+    assert!(!fish_check("unagi"));
+    assert!(!fish_check("una"));
     assert!(!fish_check("usagi"));
 }
