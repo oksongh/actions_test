@@ -18,12 +18,12 @@ fn test_ci_pass_desu() {
     assert!(!unagi_check("una"));
 }
 #[test]
-fn test_ci_fail_desu() {
+fn test_ci_pass2_desu() {
     assert!(fish_check("saba"));
     assert!(fish_check("hugu"));
     assert!(fish_check("saba and hugu"));
-    assert!(fish_check("unagi"));
-    assert!(fish_check("una"));
 
-    assert!(fish_check("usagi"));
+    assert!(!fish_check("unagi"));
+    assert!(!fish_check("una"));
+    assert!(!fish_check("usagi"));
 }
